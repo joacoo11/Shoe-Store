@@ -203,6 +203,7 @@ nav li:hover{
     padding-bottom: 30px;
 }
 
+/* Footer */
 
 footer{
     background-color: black;
@@ -253,7 +254,7 @@ footer{
 
 /* Shoes */
 .shoes__main{
-    background-image: url(../imagenes/gobf.jpg);
+    background-image: url(../imagenes/background\ 1.jpg);
     background-size: auto;
 }
 
@@ -306,12 +307,13 @@ footer{
 }
 
 .p__shoes{
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Lobster', cursive;
     color: #ffffff;
     background-color: #ff4500;
     width: 19rem;
     padding: 5px 0 5px 10px;
-    font-weight: bold;
+    font-weight: 300;
+    font-size: 18px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -324,7 +326,7 @@ a.button{
     
     color:#ffffff;
     background-color:transparent;
-    border:1px solid #49281C;
+    border:1px solid #281828;
     border-radius:100px;
     
     padding: .3em 1.2em;
@@ -336,9 +338,10 @@ a.button{
   }
   
   a.button:hover{
-    color:#000000;
+    color:#ffffff;
     background-color:#ff4500;
     background-position: -100% 100%;
+    border:#ff4500 1px solid;
   }
 
 
@@ -367,6 +370,87 @@ a.button{
     color:#ff4500;
     background-color:white;
     background-position: -100% 100%;
-    border: 1px solid white;
+    border: 1px solid #ff4500;
   }
   
+  /* Contact us */
+.main__con{
+    padding: 50px;
+    background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )  
+  ,url(../imagenes/background\ 1.jpg);
+  background-size:cover;
+  height: 100%;
+  }
+
+.form img{
+      height: 37em;
+      width: 25em;
+      background:linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5));
+      border:#ff4500 solid 2px 0 2px 2px;
+    }
+
+.form{
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+}
+
+.form form{
+    background-image: url(../imagenes/formm.jpg);
+    background-size: cover;
+    display: flex;    
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left:20px;
+    padding-right: 10px;
+    font-family: 'Lobster', cursive;
+    border-left: #ff4500 solid 15px;
+    height: 37em;
+    width: 23.5em;
+}
+
+form ::placeholder{
+    font-family: 'Lobster', cursive;
+}
+
+.input__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.input__form input{
+    width: 15em;
+    height: 2.5em;
+}
+
+.input__form select{
+    width: 15em;
+    height: 2.5em;
+}
+
+/* About us */
+.ab__main{
+    background-image: url(../imagenes/background\ 1.jpg);
+    background-size: cover;
+}
+
+.ab__logo{
+    height: 100%;
+}
+
+.pres{
+    display: flex;
+}
+
+.pres p{
+    color: #ffffff;
+    background-color: #ff4500;
+    font-family: 'Lobster', cursive;
+}
