@@ -445,8 +445,7 @@ form ::placeholder{
     height: 100%;
 }
 
-.pres{
-    display: flex;
+.pres    display: flex;
 }
 
 .pres p{
