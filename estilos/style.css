@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth ;
 }
 
 header{
@@ -302,6 +303,7 @@ footer{
     width: 19rem;
     background-image: url(../imagenes/123.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     height: 200px;
     border-radius: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0,2, 0.2);
@@ -432,14 +434,42 @@ form ::placeholder{
     flex-direction: column;
 }
 
-.input__form input{
-    width: 15em;
-    height: 2.5em;
+.input__form > textarea{
+    resize: none;
+    outline: none;
 }
 
-.input__form select{
+.input__form > input:focus, textarea:focus{
+    border-bottom: #ff4500 1px solid;
+}
+
+.input__form > textarea::-webkit-scrollbar{
+    width: 8px;
+    cursor: pointer;
+}
+
+.input__form > textarea::-webkit-scrollbar-thumb{
+    background-color: #ff4500;
+}
+
+.input__form input, select{
     width: 15em;
     height: 2.5em;
+    outline: none;
+    border:none;
+    border-bottom: 1px #D3D3D3 solid;
+}
+
+.error{
+    color:red;   
+}
+
+.error:focus{
+    border-bottom: red 1px solid;
+}
+
+#succes{
+    color: #28a745;
 }
 
 #slideShow {
@@ -494,4 +524,19 @@ form ::placeholder{
     font-size: 20px;
     border-radius: 5px;
     font-weight: normal;
+}
+
+/* SHOPPING CART */
+#main-shop{
+    background-image: url(../imagenes/background\ 1.jpg);
+    background-size: cover;
+}
+
+#sec-shop{
+   height: 100%;
+}
+
+#div-shop{
+    border: 1px solid #ff4500;
+    padding-top: 600px;
 }

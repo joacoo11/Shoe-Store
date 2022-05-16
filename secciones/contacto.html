@@ -37,34 +37,41 @@
             <form id="formulario">
                 <div class="input__form">
                     <label for="name">Name</label>
-                    <input id="input1" type="text" placeholder="What's your name?">
+                    <input id="input1" type="text" placeholder="What's your name?" required>
+                    <small class="error"></small>
                 </div>
                 <div class="input__form">
                     <label for="surname">Last name</label>
-                    <input id="input2" type="text" placeholder="What's your last name?">
+                    <input id="input2" type="text" placeholder="What's your last name?" required>
+                    <small class="error"></small>
                 </div>
                 <div class="input__form">
                     <label for="E-mail">E-mail</label>
-                    <input id="input3" type="email" placeholder="What's your e-mail?">
+                    <input id="input3" type="email" placeholder="What's your e-mail?" required>
+                    <small class="error"></small>
                 </div>
                 <div class="input__form">
                     <label for="phone">Phone</label>
-                    <input id="input4" type="phone" placeholder="What's your phone number?">
+                    <input id="input4" type="phone" placeholder="What's your phone number?" required>
+                    <small class="error"></small>
                 </div>
                 <div class="input__form">
                     <label for="city">Do you live in the USA?</label>
-                    <select id="input5" name="city">
+                    <select id="input5" name="city" required>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                         <option value="udc">I don´t wish to answer</option>
                     </select>
+                    <small class="error"></small>
                 </div>
                 <div class="input__form">
                     <label for="phone">Your message: </label>
-                    <textarea id="input6" name="message" cols="35" rows="7" placeholder="Please write you message here."></textarea>
+                    <textarea id="input6" name="message" cols="35" rows="7" placeholder="Please write you message here." required></textarea>
+                    <small class="error"></small>
                 </div>
 
                 <button id="click">Submit</button>
+                <p id="succes"></p>
 
             </form>
 
@@ -97,7 +104,7 @@
         </nav>
         
     </footer>
-    <script src="../js/conta.js"></script> 
+    <script src="../js/script.js"></script> 
 
 </body>
 </html>
