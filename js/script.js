@@ -132,17 +132,15 @@ const errorNodes = document.querySelectorAll(".error")
 let infoUser = [];
 
 form.addEventListener('submit', (e) =>{
+   e.preventDefault()  
    let inputValue = [];
    if(input1.value === "" || input1.value === null){
        inputValue.push('Please enter your first name.')
    }
 
    if(inputValue > 0){
-    e.preventDefault()  
     errorNodes.innerText = inputValue.join(', ') 
 } 
 
+let inputVal1 = JSON.stringify(localStorage.getItem("inputValues", input1))
 })
-
-
-
