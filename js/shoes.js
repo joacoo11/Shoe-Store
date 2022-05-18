@@ -13,4 +13,11 @@ const stock = [
 ]
 
 stock.push({name:"Adidas NMD" , price:22000 , img:"../Shoes/Adidas_Nmd.png"})
-console.log(stock)
+// console.log(stock)
+
+const stockActualizado = [
+    {...stock},
+    {name:"Adidas NMD" , price:22000 , img:"../Shoes/Adidas_Nmd.png"}
+]
+
+console.log(stockActualizado)

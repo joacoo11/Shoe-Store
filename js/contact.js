@@ -84,3 +84,35 @@ form.addEventListener('submit',(evt) =>{
     localStorage.setItem("UserData", dataUser)
 })
 
+
+// Contact Form Optmizado
+form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    input1.value ==="" && dataUser.push("No name entered") 
+    input1.value !=="" && dataUser.push("Name: " + input1.value)
+    input2.value ==="" && dataUser.push("No last name entered") 
+    input2.value !=="" && dataUser.push("Last name: " + input2.value)
+    input3.value ==="" && dataUser.push("No Email entered") 
+    input3.value !=="" && dataUser.push("Email: " + input3.value)
+    input4.value ==="" && dataUser.push("No Phone number entered") 
+    input4.value !=="" && dataUser.push("Phone: "+ input4.value)
+    switch(input5.value){
+        case "Yes":
+            dataUser.push("Lives in USA: " + input5.value)
+            break;
+        case "No":
+            dataUser.push("Lives in USA: " + input5.value)
+            break;
+        case "I don't wish to answer":
+            dataUser.push("Lives in USA: " + input5.value)
+            break;
+        default:
+            dataUser.push("Lives in USA: Error")
+    }
+    input6.value ==="" && dataUser.push("No message entered") 
+    input6.value !=="" && dataUser.push("Message: " + input6.value)
+
+    console.log(dataUser)
+    localStorage.setItem("UserData" , dataUser)
+})
