@@ -460,17 +460,6 @@ form ::placeholder{
     border-bottom: 1px #D3D3D3 solid;
 }
 
-.error{
-    color:red;   
-}
-
-.error:focus{
-    border-bottom: red 1px solid;
-}
-
-#succes{
-    color: #28a745;
-}
 
 #slideShow {
     position: relative;
