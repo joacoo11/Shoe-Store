@@ -340,6 +340,8 @@ a.button{
     
     padding: .3em 1.2em;
     margin:5px;
+
+    cursor: pointer;
         
     background-size: 200% 100%; 
     background-image: linear-gradient(to right, #DB4A02 50%, #ff4500 50%);
@@ -382,6 +384,26 @@ a.button{
     border: 1px solid #ff4500;
   }
   
+.random-shoe{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.background{
+    background-image: img;
+}
+
+.random-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
   /* Contact us */
 .main__con{
     padding: 50px;
@@ -486,6 +508,11 @@ form ::placeholder{
 }
 
 /* About us */
+
+.h1__sh{
+    margin-top: 30px;
+}
+
 .ab__main{
     background-image: url(../imagenes/background\ 1.jpg);
     background-size: cover;
@@ -494,6 +521,7 @@ form ::placeholder{
 .ab__logo{
     height: 100%;
     max-width: 50%;
+    margin-left: 50px;
 }
 
 .pres{
@@ -505,10 +533,10 @@ form ::placeholder{
     color: #ffffff;
     background-color: #ff4500;
     font-family: 'Lobster', cursive;
-    width: 50rem;
-    height: 18em;
-    margin-top: 30px;
-    margin-right: 20px;
+    width: 47rem;
+    height: 11em;
+    margin-top: 80px;
+    margin-right: 50px;
     padding:15px;
     font-size: 20px;
     border-radius: 5px;

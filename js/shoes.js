@@ -21,3 +21,32 @@ const stockActualizado = [
 ]
 
 console.log(stockActualizado)
+
+
+
+
+const pics = [ 
+    'url(../Shoes/4.png)',
+    'url(../Shoes/ky3.png)',
+    'url(../Shoes/lebro.png)',
+    'url(../Shoes/ike-kyrie-3-basketball-shoe-nike-11563228103zb3wo3uuxc.png)',
+    'url(../Shoes/lebron-11-graffiti-nike-lebron-11-mens-sports-shoes-png-favpng-AUzetSVHx8HN5C8sR35wbG1vx.jpg)',
+    'url(../Shoes/air-jordan-basketball-shoe-nike-sneakers-basketball-shoe.png)',
+    'url(../Shoes/imgbin-nike-lebron-14-sports-shoes-basketball-shoe-nike-lebron-je1ziyCAdSNdjyXNshKnTtbHr.jpg)',
+    'url(../Shoes/imgbin-golden-state-warriors-nike-basketball-shoe-kevin-durant-e491hRsEb02xETiKZVG6Bc556.jpg)',
+    'url(../Shoes/grinch.png)',
+    'url(../Shoes/kyrie 5.jpg)',
+    'url(../Shoes/kyrie 6.jpg)',
+ ]
+
+const pic = document.querySelector("#random-img")
+const but = document.querySelector("#button-random")
+
+function showImage(){
+    let a = Math.floor(Math.random()*pics.length);
+    let image = new Image();
+    image.src = "../Shoes/"+ a[i] + ".png"
+    but.appendChild(image)
+}
+
+but.addEventListener('click', showImage)
