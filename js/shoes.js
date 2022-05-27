@@ -39,14 +39,5 @@ const pics = [
     'url(../Shoes/kyrie 6.jpg)',
  ]
 
-const pic = document.querySelector("#random-img")
-const but = document.querySelector("#button-random")
 
-function showImage(){
-    let a = Math.floor(Math.random()*pics.length);
-    let image = new Image();
-    image.src = "../Shoes/"+ a[i] + ".png"
-    but.appendChild(image)
-}
-
-but.addEventListener('click', showImage)
+ 
