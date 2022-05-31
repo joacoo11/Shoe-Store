@@ -84,7 +84,7 @@ function displayCart(){
         Object.values(cartItem).map(item => {
             productContainer.innerHTML += `
             <div class="product">
-                 <ion-icon id="delete" name="close-circle-outline"></ion-icon>
+                 <ion-icon class="delete" name="close-circle-outline"></ion-icon>
                  <img src="${item.img}"</img>
                  <span> ${item.name} </span>
             </div>
@@ -99,8 +99,6 @@ function displayCart(){
                  <span>$${item.inCart * item.price},00</span>
             </div>
             `
-            removeItem();
- 
         });
 
         productContainer.innerHTML += `
@@ -109,6 +107,7 @@ function displayCart(){
             <h4 class="basketTotal">$${cartPrice},00</h4>
         </div>
         <div class="buy-btn">
+            <a  onclick="clearCart()" class="add-cart">Clear</a>
             <a class="add-cart" href="#">Buy</a>
         </div>
         `
@@ -119,22 +118,75 @@ function displayCart(){
         </div>
         <div class="empty-btn">
             <a class="click" href="../secciones/shoes.html">Click here</a>
-            <a class="click"> Clear cart</a>
         </div>        
         `
     }
 }
 
-function removeItem(){
-    const deleteBtn = document.querySelector('#delete')
 
-    deleteBtn.addEventListener('click',()=>{
-        alert("HI")
-    } )
-
-
-
+function clearCart(product){
+    
+    let cartItem = localStorage.getItem('productsInCart');
+    cartItem = JSON.parse(cartItem);
+    
+    for(let i in cartItem) {
+       if(cartItem != null){
+           localStorage.removeItem('cartNumber',cartItem[i].inCart--);
+           localStorage.removeItem('productsInCart',cartItem[i]);
+           localStorage.removeItem('totalPrice');
+           window.location.reload();
+        } else {
+            console.log("empty");
+        }
+       
+    }
+    
 }
+
+
+// function removeItem(product){
+//     let cartItem = localStorage.getItem('productsInCart');
+//     cartItem = JSON.parse(cartItem);
+
+//     for(let i in cartItem) {
+//         if(cartItem != null){
+//             localStorage.removeItem('productsInCart',cartItem[i]);
+//             localStorage.removeItem('totalPrice',cartItem[i]);
+//             window.location.reload();
+//         } else {
+//             console.log("empty");
+//         }
+
+//     }
+// }
+
+
+
+
+
+
+let removeCartItemButtons = document.querySelectorAll(".delete");
+for(let i=0; i < removeCartItemButtons.length; i++){
+    let button = removeCartItemButtons[i];
+   
+    button.addEventListener('click', (e) => {
+        let cartItem = localStorage.getItem('productsInCart');
+        cartItem = JSON.parse(cartItem);
+    
+    for(let i in cartItem) {
+       if(cartItem != null){
+           localStorage.removeItem('cartNumbers',cartItem[i].inCart--);
+           localStorage.removeItem('productsInCart',cartItem[i]);
+           localStorage.removeItem('totalPrice');
+        } else {
+            console.log("empty");
+        }
+       
+    }
+        window.location.reload();
+    })
+}
+
 
 
 displayCart();
